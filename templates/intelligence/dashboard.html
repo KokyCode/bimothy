@@ -105,7 +105,7 @@
                                             <span class="case-status">{{ case.status }}</span>
                                             <span class="case-priority">{{ case.priority }}</span>
                                         </div>
-                                        <p class="case-agent">Lead: {{ case.lead_agent.get_full_name|default:case.lead_agent.username }}</p>
+                                        <p class="case-agent">Lead: {% if case.lead_agent %}{{ case.lead_agent.get_full_name|default:case.lead_agent.username }}{% else %}Unassigned{% endif %}</p>
                                     </div>
                                 {% endfor %}
                             </div>

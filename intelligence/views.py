@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.db.models import Count, Q
 from django.http import JsonResponse, HttpResponse
@@ -10,6 +11,9 @@ from .models import Gang, GangMember, Incident, GangRelationship, CaseFile
 from datetime import timedelta
 from django.utils import timezone
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @csrf_exempt
@@ -74,34 +78,54 @@ def logout_view(request):
 @login_required
 def dashboard(request):
     """Main dashboard view"""
-    # Get statistics
-    total_gangs = Gang.objects.filter(is_active=True).count()
-    total_members = GangMember.objects.filter(status='ACTIVE').count()
-    open_incidents = Incident.objects.filter(status__in=['OPEN', 'INVESTIGATING']).count()
-    active_cases = CaseFile.objects.filter(status__in=['OPEN', 'ACTIVE']).count()
-    
-    # Recent incidents
-    recent_incidents = Incident.objects.all()[:5]
-    
-    # High priority cases
-    priority_cases = CaseFile.objects.filter(priority__in=['HIGH', 'URGENT'])[:5]
-    
-    # Critical gangs
-    critical_gangs = Gang.objects.filter(threat_level='CRITICAL', is_active=True)[:5]
-    
-    context = {
-        'total_gangs': total_gangs,
-        'total_members': total_members,
-        'open_incidents': open_incidents,
-        'active_cases': active_cases,
-        'recent_incidents': recent_incidents,
-        'priority_cases': priority_cases,
-        'critical_gangs': critical_gangs,
-        'agent': request.user,
-        'edit_mode': request.session.get('edit_mode', False),
-    }
-    
-    return render(request, 'intelligence/dashboard.html', context)
+    try:
+        # Get statistics - use safe defaults if database is empty
+        total_gangs = Gang.objects.filter(is_active=True).count()
+        total_members = GangMember.objects.filter(status='ACTIVE').count()
+        open_incidents = Incident.objects.filter(status__in=['OPEN', 'INVESTIGATING']).count()
+        active_cases = CaseFile.objects.filter(status__in=['OPEN', 'ACTIVE']).count()
+        
+        # Recent incidents
+        recent_incidents = Incident.objects.all()[:5]
+        
+        # High priority cases - select_related to avoid N+1 queries
+        priority_cases = CaseFile.objects.select_related('lead_agent').filter(priority__in=['HIGH', 'URGENT'])[:5]
+        
+        # Critical gangs
+        critical_gangs = Gang.objects.filter(threat_level='CRITICAL', is_active=True)[:5]
+        
+        context = {
+            'total_gangs': total_gangs,
+            'total_members': total_members,
+            'open_incidents': open_incidents,
+            'active_cases': active_cases,
+            'recent_incidents': recent_incidents,
+            'priority_cases': priority_cases,
+            'critical_gangs': critical_gangs,
+            'agent': request.user,
+            'edit_mode': request.session.get('edit_mode', False),
+        }
+        
+        return render(request, 'intelligence/dashboard.html', context)
+    except Exception as e:
+        # Log error and show a basic dashboard
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.error(f"Dashboard error: {str(e)}")
+        
+        # Return a minimal context to avoid 500 error
+        context = {
+            'total_gangs': 0,
+            'total_members': 0,
+            'open_incidents': 0,
+            'active_cases': 0,
+            'recent_incidents': [],
+            'priority_cases': [],
+            'critical_gangs': [],
+            'agent': request.user,
+            'edit_mode': False,
+        }
+        return render(request, 'intelligence/dashboard.html', context)
 
 
 @login_required
