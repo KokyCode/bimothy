@@ -25,7 +25,10 @@ In your Railway project dashboard, go to the "Variables" tab and add the followi
 SECRET_KEY=your-secret-key-here-generate-a-random-one
 DEBUG=False
 ALLOWED_HOSTS=your-app-name.railway.app,*.railway.app
+CSRF_TRUSTED_ORIGINS=https://your-app-name.railway.app
 ```
+
+**Important:** Replace `your-app-name.railway.app` with your actual Railway domain. You can find this in your Railway project settings under "Domains" or in the service URL.
 
 ### Optional Variables:
 

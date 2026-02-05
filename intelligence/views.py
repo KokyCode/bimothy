@@ -3,12 +3,19 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Count, Q
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt
 from .models import Gang, GangMember, Incident, GangRelationship, CaseFile
 from datetime import timedelta
 from django.utils import timezone
 import json
+
+
+@csrf_exempt
+def health_check(request):
+    """Health check endpoint for Railway"""
+    return HttpResponse("OK", status=200)
 
 
 def login_view(request):
