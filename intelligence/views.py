@@ -24,13 +24,40 @@ def login_view(request):
         return redirect('dashboard')
     
     if request.method == 'POST':
-        agent_id = request.POST.get('agent_id')
-        passcode = request.POST.get('passcode')
+        agent_id = request.POST.get('agent_id', '').strip()
+        passcode = request.POST.get('passcode', '').strip()
         
+        # Debug: Check if we're getting the data
+        if not agent_id or not passcode:
+            messages.error(request, 'Please enter both Agent ID and Passcode.')
+            return render(request, 'intelligence/login.html')
+        
+        # Try authentication
         user = authenticate(request, username=agent_id, password=passcode)
+        
+        # If authentication fails, try case-insensitive username lookup
+        if user is None:
+            try:
+                user_obj = User.objects.get(username__iexact=agent_id)
+                if user_obj.check_password(passcode):
+                    user = user_obj
+            except User.DoesNotExist:
+                pass
+            except User.MultipleObjectsReturned:
+                # If multiple users found, try exact match first
+                try:
+                    user_obj = User.objects.get(username=agent_id)
+                    if user_obj.check_password(passcode):
+                        user = user_obj
+                except User.DoesNotExist:
+                    pass
+        
         if user is not None:
-            login(request, user)
-            return redirect('dashboard')
+            if user.is_active:
+                login(request, user)
+                return redirect('dashboard')
+            else:
+                messages.error(request, 'Account is inactive. Contact administrator.')
         else:
             messages.error(request, 'Invalid credentials. Access Denied.')
     

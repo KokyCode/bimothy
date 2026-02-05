@@ -17,18 +17,27 @@ def create_superuser():
     email = os.environ.get('ADMIN_EMAIL', 'admin@example.com')
     password = os.environ.get('ADMIN_PASSWORD', 'admin123')
     
-    if User.objects.filter(username=username).exists():
-        print(f"User '{username}' already exists!")
-        return
-    
-    User.objects.create_superuser(
+    user, created = User.objects.get_or_create(
         username=username,
-        email=email,
-        password=password
+        defaults={'email': email, 'is_staff': True, 'is_superuser': True}
     )
-    print(f"Superuser '{username}' created successfully!")
+    
+    if not created:
+        # User exists, update password and ensure superuser status
+        user.set_password(password)
+        user.email = email
+        user.is_staff = True
+        user.is_superuser = True
+        user.save()
+        print(f"User '{username}' password updated!")
+    else:
+        user.set_password(password)
+        user.save()
+        print(f"Superuser '{username}' created successfully!")
+    
     print(f"Username: {username}")
     print(f"Password: {password}")
+    print(f"Email: {email}")
 
 if __name__ == '__main__':
     create_superuser()
