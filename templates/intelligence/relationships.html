@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Gang Relationships - SA-DOJ</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+    {% include 'intelligence/includes/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'intelligence/includes/topbar.html' %}
+
+        <div class="content-area">
+            <div class="page-header">
+                <h1>GANG RELATIONSHIPS</h1>
+                <p class="page-subtitle">Inter-gang relationship analysis</p>
+                {% if edit_mode %}
+                    <div class="edit-mode-banner">
+                        <span class="edit-mode-indicator active">●</span> Edit Mode Enabled
+                        <button class="btn-create-new" onclick="openCreateRelationshipModal()">+ Create New Relationship</button>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="relationship-network">
+                <div class="network-placeholder">
+                    <h2>RELATIONSHIP NETWORK VISUALIZATION</h2>
+                    <p>Interactive network diagram coming soon</p>
+                </div>
+            </div>
+
+            <div class="relationships-list">
+                {% for rel in relationships %}
+                    <div class="relationship-card relationship-{{ rel.relationship_type|lower }}">
+                        <div class="relationship-gangs">
+                            <div class="relationship-gang">
+                                <div class="gang-marker" style="background-color: {{ rel.gang_1.color }};"></div>
+                                <span>{{ rel.gang_1.name }}</span>
+                            </div>
+                            
+                            <div class="relationship-indicator">
+                                <div class="relationship-line relationship-{{ rel.relationship_type|lower }}"></div>
+                                <span class="relationship-label">{{ rel.relationship_type }}</span>
+                            </div>
+                            
+                            <div class="relationship-gang">
+                                <div class="gang-marker" style="background-color: {{ rel.gang_2.color }};"></div>
+                                <span>{{ rel.gang_2.name }}</span>
+                            </div>
+                        </div>
+                        
+                        {% if rel.notes %}
+                            <div class="relationship-notes">
+                                <p>{{ rel.notes }}</p>
+                            </div>
+                        {% endif %}
+                        
+                        <div class="relationship-footer">
+                            <div class="relationship-date">
+                                Last updated: {{ rel.updated_at|date:"M d, Y" }}
+                            </div>
+                            {% if edit_mode %}
+                                <div class="edit-controls">
+                                    <button class="btn-edit" onclick="editRelationship({{ rel.id }})" title="Edit">✏️</button>
+                                    <button class="btn-delete" onclick="deleteRelationship({{ rel.id }})" title="Delete">🗑️</button>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% if edit_mode %}
+    <!-- Create/Edit Relationship Modal -->
+    <div id="relationshipModal" class="edit-modal">
+        <div class="edit-modal-content">
+            <span class="edit-modal-close" onclick="closeRelationshipModal()">&times;</span>
+            <h2 id="relationshipModalTitle">Create New Relationship</h2>
+            <form id="relationshipForm">
+                <input type="hidden" id="relationshipId" name="id">
+                <div class="form-group">
+                    <label>Gang 1 *</label>
+                    <select id="relationshipGang1" name="gang_1_id" required>
+                        {% for gang in gangs %}
+                            <option value="{{ gang.id }}">{{ gang.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Gang 2 *</label>
+                    <select id="relationshipGang2" name="gang_2_id" required>
+                        {% for gang in gangs %}
+                            <option value="{{ gang.id }}">{{ gang.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Relationship Type</label>
+                    <select id="relationshipType" name="relationship_type">
+                        <option value="ALLIED">Allied</option>
+                        <option value="NEUTRAL">Neutral</option>
+                        <option value="RIVAL">Rival</option>
+                        <option value="WAR">At War</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="relationshipNotes" name="notes" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeRelationshipModal()" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/edit-mode.js' %}"></script>
+    {% endif %}
+</body>
+</html>
+

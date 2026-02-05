@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA-DOJ - Restricted Access</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-overlay"></div>
+        
+        <div class="login-box">
+            <div class="login-header">
+                <div class="badge-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,5 60,35 90,35 65,55 75,85 50,65 25,85 35,55 10,35 40,35" fill="currentColor"/>
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h1>SAN ANDREAS DOJ</h1>
+                <div class="restricted-badge">
+                    <span class="restricted-icon">⚠</span>
+                    <span>RESTRICTED ACCESS TO SAN-DOJ</span>
+                </div>
+            </div>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="POST" class="login-form">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="agent_id">DOJ AGENT ID</label>
+                    <input 
+                        type="text" 
+                        id="agent_id" 
+                        name="agent_id" 
+                        required 
+                        autofocus
+                        placeholder="Enter Agent ID"
+                        autocomplete="username"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="passcode">SECURITY PASSCODE</label>
+                    <input 
+                        type="password" 
+                        id="passcode" 
+                        name="passcode" 
+                        required
+                        placeholder="Enter Passcode"
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <button type="submit" class="btn-login">
+                    <span>ACCESS SYSTEM</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p class="warning-text">
+                    <span class="warning-icon">🔒</span>
+                    Unauthorized access is strictly prohibited and will be prosecuted
+                </p>
+                <p class="system-info">SA-DOJ Intelligence System v2.5 | Secure Connection</p>
+            </div>
+        </div>
+
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle animation effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBox = document.querySelector('.login-box');
+            loginBox.style.animation = 'fadeInUp 0.8s ease-out';
+        });
+    </script>
+</body>
+</html>
+

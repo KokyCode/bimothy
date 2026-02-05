@@ -1,0 +1,46 @@
+{% load static %}
+<div class="topbar">
+    <div class="topbar-left">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <div class="breadcrumb">
+            <span>SA-DOJ</span>
+            <span class="separator">/</span>
+            <span>{% block page_title %}Dashboard{% endblock %}</span>
+        </div>
+    </div>
+
+    <div class="topbar-right">
+        <div class="system-time">
+            <span id="current-time"></span>
+        </div>
+        <div class="system-status">
+            <span class="status-indicator status-online"></span>
+            <span>System Online</span>
+        </div>
+        <div class="topbar-user">
+            <span>{{ agent.username }}</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { 
+            hour: '2-digit', 
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false 
+        });
+        document.getElementById('current-time').textContent = timeString;
+    }
+    
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('collapsed');
+        document.querySelector('.main-content').classList.toggle('expanded');
+    }
+</script>
+

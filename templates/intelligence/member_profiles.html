@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Member Profiles - SA-DOJ</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+    {% include 'intelligence/includes/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'intelligence/includes/topbar.html' %}
+
+        <div class="content-area">
+            <div class="page-header">
+                <h1>MEMBER PROFILES</h1>
+                <p class="page-subtitle">Known gang member database</p>
+                {% if edit_mode %}
+                    <div class="edit-mode-banner">
+                        <span class="edit-mode-indicator active">●</span> Edit Mode Enabled
+                        <button class="btn-create-new" onclick="openCreateMemberModal()">+ Create New Member</button>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="filters-bar">
+                <form method="GET" class="filter-form">
+                    <select name="gang" onchange="this.form.submit()">
+                        <option value="">All Gangs</option>
+                        {% for gang in gangs %}
+                            <option value="{{ gang.id }}">{{ gang.name }}</option>
+                        {% endfor %}
+                    </select>
+                    
+                    <select name="threat" onchange="this.form.submit()">
+                        <option value="">All Threat Levels</option>
+                        <option value="LOW">Low</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="HIGH">High</option>
+                        <option value="CRITICAL">Critical</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="members-grid">
+                {% for member in members %}
+                    <div class="member-card">
+                        <div class="member-photo">
+                            {% if member.photo %}
+                                <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+                            {% else %}
+                                <div class="member-placeholder">{{ member.name|first }}</div>
+                            {% endif %}
+                            <span class="member-status status-{{ member.status|lower }}">{{ member.status }}</span>
+                        </div>
+                        
+                        <div class="member-info">
+                            <h3>{{ member.name }}</h3>
+                            {% if member.alias %}
+                                <p class="member-alias">"{{ member.alias }}"</p>
+                            {% endif %}
+                            
+                            <div class="member-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Gang:</span>
+                                    <span class="detail-value" style="color: {{ member.gang.color }}">{{ member.gang.name }}</span>
+                                </div>
+                                {% if member.rank %}
+                                    <div class="detail-row">
+                                        <span class="detail-label">Rank:</span>
+                                        <span class="detail-value">{{ member.rank }}</span>
+                                    </div>
+                                {% endif %}
+                                <div class="detail-row">
+                                    <span class="detail-label">Threat:</span>
+                                    <span class="threat-badge threat-{{ member.threat_level|lower }}">{{ member.threat_level }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="member-actions">
+                            <button class="btn-view-profile">View Full Profile →</button>
+                            {% if edit_mode %}
+                                <div class="edit-controls">
+                                    <button class="btn-edit" onclick="editMember({{ member.id }})" title="Edit">✏️</button>
+                                    <button class="btn-delete" onclick="deleteMember({{ member.id }})" title="Delete">🗑️</button>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% if edit_mode %}
+    <!-- Create/Edit Member Modal -->
+    <div id="memberModal" class="edit-modal">
+        <div class="edit-modal-content">
+            <span class="edit-modal-close" onclick="closeMemberModal()">&times;</span>
+            <h2 id="memberModalTitle">Create New Member</h2>
+            <form id="memberForm">
+                <input type="hidden" id="memberId" name="id">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" id="memberName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Alias</label>
+                    <input type="text" id="memberAlias" name="alias">
+                </div>
+                <div class="form-group">
+                    <label>Gang *</label>
+                    <select id="memberGang" name="gang_id" required>
+                        {% for gang in gangs %}
+                            <option value="{{ gang.id }}">{{ gang.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Rank</label>
+                    <input type="text" id="memberRank" name="rank">
+                </div>
+                <div class="form-group">
+                    <label>Threat Level</label>
+                    <select id="memberThreatLevel" name="threat_level">
+                        <option value="LOW">Low</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="HIGH">High</option>
+                        <option value="CRITICAL">Critical</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="memberStatus" name="status">
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                        <option value="WANTED">Wanted</option>
+                        <option value="INCARCERATED">Incarcerated</option>
+                        <option value="DECEASED">Deceased</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Criminal Record</label>
+                    <textarea id="memberCriminalRecord" name="criminal_record" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="memberNotes" name="notes" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeMemberModal()" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/edit-mode.js' %}"></script>
+    {% endif %}
+</body>
+</html>
+

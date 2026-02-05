@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SA-DOJ Intelligence</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+    {% include 'intelligence/includes/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'intelligence/includes/topbar.html' %}
+
+        <div class="content-area">
+            <div class="page-header">
+                <h1>INTELLIGENCE DASHBOARD</h1>
+                <p class="page-subtitle">Real-time gang activity monitoring system</p>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card stat-card-gangs">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <h3>{{ total_gangs }}</h3>
+                        <p>Active Gangs</p>
+                    </div>
+                    <div class="stat-trend up">+3</div>
+                </div>
+
+                <div class="stat-card stat-card-members">
+                    <div class="stat-icon">👤</div>
+                    <div class="stat-info">
+                        <h3>{{ total_members }}</h3>
+                        <p>Known Members</p>
+                    </div>
+                    <div class="stat-trend up">+12</div>
+                </div>
+
+                <div class="stat-card stat-card-incidents">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <h3>{{ open_incidents }}</h3>
+                        <p>Open Incidents</p>
+                    </div>
+                    <div class="stat-trend down">-5</div>
+                </div>
+
+                <div class="stat-card stat-card-cases">
+                    <div class="stat-icon">📁</div>
+                    <div class="stat-info">
+                        <h3>{{ active_cases }}</h3>
+                        <p>Active Cases</p>
+                    </div>
+                    <div class="stat-trend up">+2</div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Recent Incidents -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Recent Incidents</h2>
+                        <a href="{% url 'incident_reports' %}" class="view-all">View All →</a>
+                    </div>
+                    <div class="card-content">
+                        {% if recent_incidents %}
+                            <div class="incident-list">
+                                {% for incident in recent_incidents %}
+                                    <div class="incident-item severity-{{ incident.severity|lower }}">
+                                        <div class="incident-header">
+                                            <span class="incident-type">{{ incident.incident_type }}</span>
+                                            <span class="incident-severity">{{ incident.severity }}</span>
+                                        </div>
+                                        <h4>{{ incident.title }}</h4>
+                                        <p class="incident-meta">
+                                            📍 {{ incident.location }} • 🕒 {{ incident.date_time|date:"M d, Y H:i" }}
+                                        </p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <p class="no-data">No recent incidents</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Priority Cases -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Priority Cases</h2>
+                        <a href="{% url 'case_files' %}" class="view-all">View All →</a>
+                    </div>
+                    <div class="card-content">
+                        {% if priority_cases %}
+                            <div class="case-list">
+                                {% for case in priority_cases %}
+                                    <div class="case-item priority-{{ case.priority|lower }}">
+                                        <div class="case-number">{{ case.case_number }}</div>
+                                        <h4>{{ case.title }}</h4>
+                                        <div class="case-meta">
+                                            <span class="case-status">{{ case.status }}</span>
+                                            <span class="case-priority">{{ case.priority }}</span>
+                                        </div>
+                                        <p class="case-agent">Lead: {{ case.lead_agent.get_full_name|default:case.lead_agent.username }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <p class="no-data">No priority cases</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Critical Gangs -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Critical Threat Gangs</h2>
+                        <a href="{% url 'gang_intelligence' %}" class="view-all">View All →</a>
+                    </div>
+                    <div class="card-content">
+                        {% if critical_gangs %}
+                            <div class="gang-list">
+                                {% for gang in critical_gangs %}
+                                    <div class="gang-item">
+                                        <div class="gang-color" style="background-color: {{ gang.color }};"></div>
+                                        <div class="gang-info">
+                                            <h4>{{ gang.name }}</h4>
+                                            <p class="gang-tag">{{ gang.tag }}</p>
+                                        </div>
+                                        <div class="gang-members">{{ gang.member_count }} members</div>
+                                        <span class="threat-badge threat-{{ gang.threat_level|lower }}">{{ gang.threat_level }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <p class="no-data">No critical threats</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- System Activity -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>System Activity</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-time">{{ "now"|date:"H:i" }}</span>
+                                <span class="activity-text">System status: All systems operational</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">{{ "now"|date:"H:i" }}</span>
+                                <span class="activity-text">Database sync completed</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">{{ "now"|date:"H:i" }}</span>
+                                <span class="activity-text">Backup completed successfully</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

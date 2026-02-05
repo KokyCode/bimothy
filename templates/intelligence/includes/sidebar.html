@@ -1,0 +1,78 @@
+{% load static %}
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 60,35 90,35 65,55 75,85 50,65 25,85 35,55 10,35 40,35" fill="currentColor"/>
+            </svg>
+        </div>
+        <h2>SA-DOJ</h2>
+        <p>Intelligence System</p>
+    </div>
+
+    <ul class="nav-menu">
+        <li>
+            <a href="{% url 'dashboard' %}" class="{% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'gang_intelligence' %}" class="{% if request.resolver_match.url_name == 'gang_intelligence' %}active{% endif %}">
+                <span class="nav-icon">🎯</span>
+                <span class="nav-text">Gang Intelligence</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'member_profiles' %}" class="{% if request.resolver_match.url_name == 'member_profiles' %}active{% endif %}">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Member Profiles</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'territory_map' %}" class="{% if request.resolver_match.url_name == 'territory_map' %}active{% endif %}">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-text">Territory Map</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'incident_reports' %}" class="{% if request.resolver_match.url_name == 'incident_reports' %}active{% endif %}">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Incident Reports</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'relationships' %}" class="{% if request.resolver_match.url_name == 'relationships' %}active{% endif %}">
+                <span class="nav-icon">🔗</span>
+                <span class="nav-text">Relationships</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'case_files' %}" class="{% if request.resolver_match.url_name == 'case_files' %}active{% endif %}">
+                <span class="nav-icon">📁</span>
+                <span class="nav-text">Case Files</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'system_settings' %}" class="{% if request.resolver_match.url_name == 'system_settings' %}active{% endif %}">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">System Settings</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="sidebar-footer">
+        <div class="user-info">
+            <div class="user-avatar">{{ agent.username|first|upper }}</div>
+            <div class="user-details">
+                <p class="user-name">{{ agent.get_full_name|default:agent.username }}</p>
+                <p class="user-role">DOJ Agent</p>
+            </div>
+        </div>
+        <a href="{% url 'logout' %}" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+        </a>
+    </div>
+</nav>
+

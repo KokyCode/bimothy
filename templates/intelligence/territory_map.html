@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territory Map - SA-DOJ</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+    {% include 'intelligence/includes/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'intelligence/includes/topbar.html' %}
+
+        <div class="content-area">
+            <div class="page-header">
+                <h1>TERRITORY MAP</h1>
+                <p class="page-subtitle">Gang territory visualization</p>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <h2>SAN ANDREAS TERRITORY MAP</h2>
+                        <p>Interactive territory mapping coming soon</p>
+                        <div class="map-legend">
+                            <h3>Active Territories:</h3>
+                            {% for gang in gangs %}
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background-color: {{ gang.color }};"></div>
+                                    <span>{{ gang.name }} ({{ gang.tag }})</span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="territory-list">
+                <h2>Territory Details</h2>
+                {% for gang in gangs %}
+                    <div class="territory-item">
+                        <div class="territory-header" style="border-left: 4px solid {{ gang.color }};">
+                            <h3>{{ gang.name }}</h3>
+                            <span class="threat-badge threat-{{ gang.threat_level|lower }}">{{ gang.threat_level }}</span>
+                        </div>
+                        <div class="territory-body">
+                            {% if gang.territory %}
+                                <p>{{ gang.territory }}</p>
+                            {% else %}
+                                <p class="no-data">No territory information available</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings - SA-DOJ</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+    {% include 'intelligence/includes/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'intelligence/includes/topbar.html' %}
+
+        <div class="content-area">
+            <div class="page-header">
+                <h1>SYSTEM SETTINGS</h1>
+                <p class="page-subtitle">Configuration and system management</p>
+            </div>
+
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h2>System Information</h2>
+                    <div class="settings-content">
+                        <div class="info-row">
+                            <span>System Version:</span>
+                            <span>SA-DOJ v2.5</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Database Status:</span>
+                            <span class="status-online">Online</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Last Backup:</span>
+                            <span>{{ "now"|date:"M d, Y H:i" }}</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Active Users:</span>
+                            <span>{{ agent.username }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2>User Preferences</h2>
+                    <div class="settings-content">
+                        <div class="setting-item">
+                            <label>Notifications</label>
+                            <input type="checkbox" checked>
+                        </div>
+                        <div class="setting-item">
+                            <label>Auto-refresh Dashboard</label>
+                            <input type="checkbox" checked>
+                        </div>
+                        <div class="setting-item">
+                            <label>Dark Mode</label>
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2>Edit Mode</h2>
+                    <div class="settings-content">
+                        <div class="setting-item">
+                            <label>Enable Edit Mode</label>
+                            <form method="POST" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" name="toggle_edit_mode" class="btn-toggle-edit {% if edit_mode %}active{% endif %}">
+                                    {% if edit_mode %}
+                                        <span class="edit-mode-indicator active">●</span> Enabled
+                                    {% else %}
+                                        <span class="edit-mode-indicator">○</span> Disabled
+                                    {% endif %}
+                                </button>
+                            </form>
+                        </div>
+                        <p class="setting-description">
+                            When enabled, you can edit, delete, and create new entries on all pages.
+                            <br><strong>Warning:</strong> Changes are permanent and cannot be undone.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2>Security</h2>
+                    <div class="settings-content">
+                        <button class="btn-settings">Change Password</button>
+                        <button class="btn-settings">Two-Factor Authentication</button>
+                        <button class="btn-settings">View Activity Log</button>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2>Data Management</h2>
+                    <div class="settings-content">
+                        <button class="btn-settings">Export Data</button>
+                        <button class="btn-settings">Database Backup</button>
+                        <button class="btn-settings">System Maintenance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

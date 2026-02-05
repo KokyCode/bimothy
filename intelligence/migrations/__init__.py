@@ -1,0 +1,2 @@
+# Intelligence app migrations
+

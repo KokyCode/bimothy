@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Gang Intelligence - SA-DOJ</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+    {% include 'intelligence/includes/sidebar.html' %}
+
+    <div class="main-content">
+        {% include 'intelligence/includes/topbar.html' %}
+
+        <div class="content-area">
+            <div class="page-header">
+                <h1>GANG INTELLIGENCE</h1>
+                <p class="page-subtitle">Comprehensive gang organization database</p>
+                {% if edit_mode %}
+                    <div class="edit-mode-banner">
+                        <span class="edit-mode-indicator active">●</span> Edit Mode Enabled
+                        <button class="btn-create-new" onclick="openCreateGangModal()">+ Create New Gang</button>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="gangs-grid">
+                {% for gang in gangs %}
+                    <div class="gang-card threat-{{ gang.threat_level|lower }}">
+                        <div class="gang-card-header" style="border-left: 4px solid {{ gang.color }};">
+                            <div class="gang-card-top">
+                                <h3>{{ gang.name }}</h3>
+                                <span class="threat-badge threat-{{ gang.threat_level|lower }}">{{ gang.threat_level }}</span>
+                            </div>
+                            <p class="gang-card-tag">{{ gang.tag }}</p>
+                        </div>
+                        
+                        <div class="gang-card-body">
+                            <div class="gang-stat">
+                                <span class="stat-label">Members:</span>
+                                <span class="stat-value">{{ gang.member_count }}</span>
+                            </div>
+                            <div class="gang-stat">
+                                <span class="stat-label">Incidents:</span>
+                                <span class="stat-value">{{ gang.incident_count }}</span>
+                            </div>
+                            {% if gang.territory %}
+                                <div class="gang-territory">
+                                    <span class="stat-label">Territory:</span>
+                                    <p>{{ gang.territory|truncatewords:15 }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="gang-card-footer">
+                            <span class="gang-status">{% if gang.is_active %}Active{% else %}Inactive{% endif %}</span>
+                            <button class="btn-view-details">View Details →</button>
+                            {% if edit_mode %}
+                                <div class="edit-controls">
+                                    <button class="btn-edit" onclick="editGang({{ gang.id }})" title="Edit">✏️</button>
+                                    <button class="btn-delete" onclick="deleteGang({{ gang.id }})" title="Delete">🗑️</button>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% if edit_mode %}
+    <!-- Create/Edit Gang Modal -->
+    <div id="gangModal" class="edit-modal">
+        <div class="edit-modal-content">
+            <span class="edit-modal-close" onclick="closeGangModal()">&times;</span>
+            <h2 id="gangModalTitle">Create New Gang</h2>
+            <form id="gangForm">
+                <input type="hidden" id="gangId" name="id">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" id="gangName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Tag *</label>
+                    <input type="text" id="gangTag" name="tag" required>
+                </div>
+                <div class="form-group">
+                    <label>Color</label>
+                    <input type="color" id="gangColor" name="color" value="#FF0000">
+                </div>
+                <div class="form-group">
+                    <label>Threat Level</label>
+                    <select id="gangThreatLevel" name="threat_level">
+                        <option value="LOW">Low</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="HIGH">High</option>
+                        <option value="CRITICAL">Critical</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Member Count</label>
+                    <input type="number" id="gangMemberCount" name="member_count" value="0" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Territory</label>
+                    <textarea id="gangTerritory" name="territory" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="gangDescription" name="description" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="gangIsActive" name="is_active" checked> Active
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeGangModal()" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/edit-mode.js' %}"></script>
+    {% endif %}
+</body>
+</html>
+
