@@ -173,11 +173,13 @@ CSRF_TRUSTED_ORIGINS = []
 
 # Get from environment variable if set
 if os.environ.get('CSRF_TRUSTED_ORIGINS'):
-    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.environ.get('CSRF_TRUSTED_ORIGINS').split(',') if origin.strip()]
+    origins = os.environ.get('CSRF_TRUSTED_ORIGINS')
+    # Handle comma-separated values
+    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in origins.split(',') if origin.strip()]
 
 # If not set, try to get from Railway environment variables
 if not CSRF_TRUSTED_ORIGINS:
-    # Railway provides RAILWAY_PUBLIC_DOMAIN or you can get it from the service
+    # Try RAILWAY_PUBLIC_DOMAIN first
     railway_domain = os.environ.get('RAILWAY_PUBLIC_DOMAIN', '')
     if railway_domain:
         # Ensure it starts with https://
@@ -185,11 +187,12 @@ if not CSRF_TRUSTED_ORIGINS:
             CSRF_TRUSTED_ORIGINS = [f'https://{railway_domain}']
         else:
             CSRF_TRUSTED_ORIGINS = [railway_domain]
-
-# If still empty, we'll need to set it manually via environment variable
-# For now, we'll make CSRF more lenient in production (you should set CSRF_TRUSTED_ORIGINS in Railway)
-if not CSRF_TRUSTED_ORIGINS and not DEBUG:
-    # This is a fallback - you should set CSRF_TRUSTED_ORIGINS in Railway
-    # For Railway, you need to add your actual domain like: https://your-app-name.railway.app
-    pass
+    else:
+        # Fallback: try to get from ALLOWED_HOSTS (less ideal but works)
+        allowed_hosts = os.environ.get('ALLOWED_HOSTS', '')
+        if allowed_hosts:
+            # Extract the first domain and add https://
+            first_host = allowed_hosts.split(',')[0].strip().replace('*.', '')
+            if first_host and first_host != '*':
+                CSRF_TRUSTED_ORIGINS = [f'https://{first_host}']
 
