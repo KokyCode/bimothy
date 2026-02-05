@@ -1,0 +1,2414 @@
+[
+{
+  "model": "intelligence.gang",
+  "pk": 1,
+  "fields": {
+    "name": "Grape Street",
+    "tag": "GSC",
+    "color": "#8B00FF",
+    "territory": "South Central Los Santos, Grape Street area, Jordan Downs housing projects",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 45,
+    "description": "Primary Crip gang operating in South Central. Known for drug trafficking and territorial control.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.192Z",
+    "updated_at": "2026-01-01T19:16:05.192Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 2,
+  "fields": {
+    "name": "Hoover Criminals",
+    "tag": "HCG",
+    "color": "#FF8C00",
+    "territory": "West Adams, Mid-City Los Santos",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 38,
+    "description": "Allied Crip gang. Strategic partnership with Grape Street.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.203Z",
+    "updated_at": "2026-01-01T19:16:05.203Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 3,
+  "fields": {
+    "name": "Black P Stones",
+    "tag": "BPS",
+    "color": "#8B0000",
+    "territory": "Baldwin Village, Crenshaw District",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 42,
+    "description": "Blood gang allied with Grape Street. Known for organized crime activities.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.216Z",
+    "updated_at": "2026-01-01T19:16:05.216Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 4,
+  "fields": {
+    "name": "Playboy Gangster Crip",
+    "tag": "PBGC",
+    "color": "#0000CD",
+    "territory": "West Los Santos, Venice area",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 28,
+    "description": "Crip ally of Grape Street. Focuses on westside operations.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.228Z",
+    "updated_at": "2026-01-01T19:16:05.228Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 5,
+  "fields": {
+    "name": "PJ Rancho Crip",
+    "tag": "PJRC",
+    "color": "#1E90FF",
+    "territory": "Rancho area, East Los Santos",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 32,
+    "description": "Rival Crip gang. Frequent conflicts with Grape Street over territory.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.240Z",
+    "updated_at": "2026-01-01T19:16:05.240Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 6,
+  "fields": {
+    "name": "Bounty Hunter Rancho Bloods",
+    "tag": "BHRB",
+    "color": "#DC143C",
+    "territory": "Rancho, Nickerson Gardens projects",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 40,
+    "description": "Major Blood rival. Active warfare with Grape Street.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.253Z",
+    "updated_at": "2026-01-01T19:16:05.253Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 7,
+  "fields": {
+    "name": "Hacienda Village Bloods",
+    "tag": "HVB",
+    "color": "#B22222",
+    "territory": "Hacienda Heights, East Los Santos",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 35,
+    "description": "Blood gang enemy. Territorial disputes ongoing.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.264Z",
+    "updated_at": "2026-01-01T19:16:05.264Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 8,
+  "fields": {
+    "name": "East Coast Crips",
+    "tag": "ECC",
+    "color": "#4169E1",
+    "territory": "East Los Santos, Vernon area",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 36,
+    "description": "Rival Crip faction. Long-standing feud with Grape Street.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.274Z",
+    "updated_at": "2026-01-01T19:16:05.274Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 9,
+  "fields": {
+    "name": "Florencia 13",
+    "tag": "F13",
+    "color": "#228B22",
+    "territory": "Florence-Firestone, South Central",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 50,
+    "description": "Major Mexican Mafia-affiliated gang. Active conflict with Grape Street.",
+    "is_active": true,
+    "created_at": "2026-01-01T19:16:05.288Z",
+    "updated_at": "2026-01-01T19:16:05.288Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 10,
+  "fields": {
+    "name": "Rancho Varrio Grape 13",
+    "tag": "RVG13",
+    "color": "#8B00FF",
+    "territory": "South Central Rancho, Jordan Downs Projects - Hispanic/Sureño side",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 35,
+    "description": "Hispanic faction of Grape Street. Sureño affiliation with Mexican Mafia ties. Operates Varrio Grape section with subsets Tiny Wynos and Gangster Locos.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.393Z",
+    "updated_at": "2026-02-04T21:47:52.393Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 11,
+  "fields": {
+    "name": "Grape Street Rancho Crip",
+    "tag": "GSC, RCG",
+    "color": "#9400D3",
+    "territory": "South Central Rancho, Jordan Downs Projects - Crip side",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 42,
+    "description": "African-American Crip faction. Operates Baby Locs section with subsets Young Militant Shottas (YMS) and OthaSideBabies (OBS).",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.408Z",
+    "updated_at": "2026-02-04T21:47:52.408Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 12,
+  "fields": {
+    "name": "Bounty Hunter Bloods",
+    "tag": "BHB",
+    "color": "#DC143C",
+    "territory": "Nickerson Gardens, Rancho projects",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 45,
+    "description": "Arch nemesis - Active warfare with Grape Street factions. Major Blood threat.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.422Z",
+    "updated_at": "2026-02-04T21:47:52.422Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 13,
+  "fields": {
+    "name": "W/S 108 Blxoc Crip",
+    "tag": "108BC",
+    "color": "#0047AB",
+    "territory": "West Side, 108th Street area",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 28,
+    "description": "IC Lore documented - West Side Crip set with history against Grape.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.437Z",
+    "updated_at": "2026-02-04T21:47:52.437Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 14,
+  "fields": {
+    "name": "Denver Lane Bloods",
+    "tag": "DLB",
+    "color": "#8B0000",
+    "territory": "West Side, Denver Lane area",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 25,
+    "description": "IC Lore documented - Blood set with documented conflicts.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.449Z",
+    "updated_at": "2026-02-04T21:47:52.449Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 15,
+  "fields": {
+    "name": "Ten Line Gangster Crip",
+    "tag": "10LGC",
+    "color": "#6495ED",
+    "territory": "Inglewood area",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 22,
+    "description": "Beef - Ongoing tensions with Grape Street.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.462Z",
+    "updated_at": "2026-02-04T21:47:52.462Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 16,
+  "fields": {
+    "name": "Fudgetown Mafia Crip",
+    "tag": "FTC",
+    "color": "#87CEEB",
+    "territory": "West Side area",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 20,
+    "description": "Beef - Intermittent conflicts.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.474Z",
+    "updated_at": "2026-02-04T21:47:52.474Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 17,
+  "fields": {
+    "name": "99 Mafia Crip",
+    "tag": "99MC",
+    "color": "#5F9EA0",
+    "territory": "Broadway area",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 24,
+    "description": "Beef - Territorial disputes.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.486Z",
+    "updated_at": "2026-02-04T21:47:52.486Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 18,
+  "fields": {
+    "name": "NHC Rollin Crips",
+    "tag": "NHCRC",
+    "color": "#4682B4",
+    "territory": "Neighborhood territories",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 26,
+    "description": "Beef - Neighborhood Crip conflicts.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.497Z",
+    "updated_at": "2026-02-04T21:47:52.497Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 19,
+  "fields": {
+    "name": "The Amendola Crew",
+    "tag": "AMENDOLA",
+    "color": "#2F4F4F",
+    "territory": "Various - Organized Crime",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 15,
+    "description": "Strategic partnership with both Grape factions. Drug distribution network.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.510Z",
+    "updated_at": "2026-02-04T21:47:52.510Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 20,
+  "fields": {
+    "name": "this is a test",
+    "tag": "lol",
+    "color": "#ff0000",
+    "territory": "123131",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 123,
+    "description": "123123131",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.521Z",
+    "updated_at": "2026-02-05T00:05:29.182Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 21,
+  "fields": {
+    "name": "E/S Playboys 13",
+    "tag": "PB13",
+    "color": "#2E8B57",
+    "territory": "East Side territory",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 30,
+    "description": "Strategic partnership with Varrio Grape. Drug distribution.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.534Z",
+    "updated_at": "2026-02-04T21:47:52.534Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 22,
+  "fields": {
+    "name": "The Mexican Mafia",
+    "tag": "EME",
+    "color": "#000000",
+    "territory": "Statewide - Prison/Street operations",
+    "threat_level": "CRITICAL",
+    "founded_date": null,
+    "member_count": 0,
+    "description": "Prison gang with street connections. Relationship with Varrio Grape under investigation.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.546Z",
+    "updated_at": "2026-02-04T21:47:52.546Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 23,
+  "fields": {
+    "name": "Hells Angels MC",
+    "tag": "HAMC",
+    "color": "#8B0000",
+    "territory": "Various - Outlaw MC territory",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 0,
+    "description": "Outlaw motorcycle club. Loose affiliation with Varrio Grape.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.557Z",
+    "updated_at": "2026-02-04T21:47:52.557Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 24,
+  "fields": {
+    "name": "Armenian Criminal Enterprise",
+    "tag": "ACE",
+    "color": "#4B0082",
+    "territory": "East Hollywood, Glendale",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 0,
+    "description": "Organized crime group. Loose affiliation with Baby Locs - drug supply.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.566Z",
+    "updated_at": "2026-02-04T21:47:52.566Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 25,
+  "fields": {
+    "name": "CHINATOWN 紅蘭堂",
+    "tag": "CTT",
+    "color": "#FF0000",
+    "territory": "Chinatown district",
+    "threat_level": "HIGH",
+    "founded_date": null,
+    "member_count": 0,
+    "description": "Asian organized crime. Loose affiliation with Baby Locs - drug supply.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.578Z",
+    "updated_at": "2026-02-04T21:47:52.578Z"
+  }
+},
+{
+  "model": "intelligence.gang",
+  "pk": 26,
+  "fields": {
+    "name": "The Black Car",
+    "tag": "TBC",
+    "color": "#1C1C1C",
+    "territory": "Unknown - Mobile operations",
+    "threat_level": "MEDIUM",
+    "founded_date": null,
+    "member_count": 0,
+    "description": "Mysterious organization. Relationship with Baby Locs unknown.",
+    "is_active": true,
+    "created_at": "2026-02-04T21:47:52.590Z",
+    "updated_at": "2026-02-04T21:47:52.590Z"
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 1,
+  "fields": {
+    "gang": 1,
+    "name": "Marcus \"Big Grape\" Johnson",
+    "alias": "Big Grape",
+    "rank": "OG",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Multiple arrests for gang-related activities. Known OG of Grape Street.",
+    "last_seen": null,
+    "status": "WANTED",
+    "threat_level": "CRITICAL",
+    "notes": "",
+    "created_at": "2026-01-01T19:16:05.438Z",
+    "updated_at": "2026-01-01T19:16:05.438Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 2,
+  "fields": {
+    "gang": 1,
+    "name": "Tyrone \"T-Bone\" Williams",
+    "alias": "T-Bone",
+    "rank": "Shot Caller",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Multiple arrests for gang-related activities. Known Shot Caller of Grape Street.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "HIGH",
+    "notes": "",
+    "created_at": "2026-01-01T19:16:05.449Z",
+    "updated_at": "2026-01-01T19:16:05.449Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 3,
+  "fields": {
+    "gang": 1,
+    "name": "DeAndre \"Lil Loc\" Davis",
+    "alias": "Lil Loc",
+    "rank": "Soldier",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Multiple arrests for gang-related activities. Known Soldier of Grape Street.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "MEDIUM",
+    "notes": "",
+    "created_at": "2026-01-01T19:16:05.463Z",
+    "updated_at": "2026-01-01T19:16:05.463Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 4,
+  "fields": {
+    "gang": 1,
+    "name": "Jamal \"Grape\" Thompson",
+    "alias": "Grape",
+    "rank": "Enforcer",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Multiple arrests for gang-related activities. Known Enforcer of Grape Street.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "HIGH",
+    "notes": "",
+    "created_at": "2026-01-01T19:16:05.478Z",
+    "updated_at": "2026-01-01T19:16:05.478Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 5,
+  "fields": {
+    "gang": 1,
+    "name": "Kevin \"K-Dog\" Brown",
+    "alias": "K-Dog",
+    "rank": "Soldier",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Multiple arrests for gang-related activities. Known Soldier of Grape Street.",
+    "last_seen": null,
+    "status": "INCARCERATED",
+    "threat_level": "MEDIUM",
+    "notes": "",
+    "created_at": "2026-01-01T19:16:05.491Z",
+    "updated_at": "2026-01-01T19:16:05.491Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 6,
+  "fields": {
+    "gang": 10,
+    "name": "Derek Fierro",
+    "alias": "Ruger",
+    "rank": "Varrio Grape Shotcaller / Tiny Wynos Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "High-ranking Varrio Grape 13 member. Controls Tiny Wynos subset. Multiple arrests for weapons possession, drug trafficking, and assault. Known for violent enforcement. Primary contact with Mexican Mafia. Considered armed and extremely dangerous.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "CRITICAL",
+    "notes": "Primary leader of Varrio Grape operations. Strategic decision maker. Has strong ties to Mexican Mafia through family connections. Expert in weapons trafficking.",
+    "created_at": "2026-02-04T21:47:52.602Z",
+    "updated_at": "2026-02-04T21:47:52.602Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 7,
+  "fields": {
+    "gang": 10,
+    "name": "Tracy Nanjares",
+    "alias": "Big Greedy",
+    "rank": "Gangster Locos Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Leader of Gangster Locos subset within RVG13. Known for drug distribution operations. Multiple arrests for narcotics sales, robbery, and extortion. Controls street-level operations in South Central.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "HIGH",
+    "notes": "Oversees day-to-day drug operations for Varrio Grape. Known for aggressive business tactics. Has connections with The Amendola Crew for supply chain.",
+    "created_at": "2026-02-04T21:47:52.617Z",
+    "updated_at": "2026-02-04T21:47:52.617Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 8,
+  "fields": {
+    "gang": 10,
+    "name": "Tyler Atienza",
+    "alias": "Lx Lazy",
+    "rank": "Gangster Locos 2nd Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Second-in-command of Gangster Locos. Assists Tracy Nanjares in operations. Arrests for assault, weapons charges, and gang activity. Known for recruitment of younger members.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "HIGH",
+    "notes": "Right hand to Big Greedy. Handles enforcement and collections. Suspected in multiple violent incidents against rival gangs.",
+    "created_at": "2026-02-04T21:47:52.630Z",
+    "updated_at": "2026-02-04T21:47:52.630Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 9,
+  "fields": {
+    "gang": 11,
+    "name": "Sincere Helms",
+    "alias": "Snatch#5",
+    "rank": "Baby Locs Shotcaller / YMS Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Top-ranking Baby Locs member. Leads Young Militant Shottas (YMS) subset. Multiple warrants for murder, attempted murder, weapons trafficking, and organized crime. Extremely violent. Consider armed and dangerous at all times.",
+    "last_seen": null,
+    "status": "WANTED",
+    "threat_level": "CRITICAL",
+    "notes": "Most wanted GSC member. Primary target in Operation Grape Harvest. Suspected in 7+ homicides. Strong connections to Hoover Criminals. Known to order retaliatory strikes.",
+    "created_at": "2026-02-04T21:47:52.643Z",
+    "updated_at": "2026-02-04T21:47:52.643Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 10,
+  "fields": {
+    "gang": 11,
+    "name": "Daron Holland",
+    "alias": "G-Rag#3",
+    "rank": "Young Militant Shottas (YMS) 2nd Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Second-in-command of YMS. Known enforcer for Baby Locs operations. Multiple arrests for assault with deadly weapon, robbery, and gang conspiracy. Close associate of Sincere Helms.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "HIGH",
+    "notes": "Primary enforcer for Snatch#5. Carries out violent orders. Suspected in multiple drive-by shootings against PJRC and BHB.",
+    "created_at": "2026-02-04T21:47:52.656Z",
+    "updated_at": "2026-02-04T21:47:52.656Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 11,
+  "fields": {
+    "gang": 11,
+    "name": "Reilly Morkins",
+    "alias": "Genocide#4",
+    "rank": "OthaSideBabies (OBS) Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Leader of OthaSideBabies subset. Operates second major faction within Baby Locs. Arrests for drug trafficking, weapons possession, and attempted murder. Known for extreme violence.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "HIGH",
+    "notes": "Runs OBS operations semi-independently. Competes with YMS but loyal to overall GSC structure. Has Armenian connections for drug supply.",
+    "created_at": "2026-02-04T21:47:52.669Z",
+    "updated_at": "2026-02-04T21:47:52.669Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangmember",
+  "pk": 12,
+  "fields": {
+    "gang": 11,
+    "name": "Christopher Olivas",
+    "alias": "Sosa#4k",
+    "rank": "OthaSideBabies (OBS) 2nd Head",
+    "photo": "",
+    "date_of_birth": null,
+    "criminal_record": "Second-in-command of OBS. Younger member rising through ranks. Arrests for narcotics sales, assault, and gang participation. Known for social media threats against rivals.",
+    "last_seen": null,
+    "status": "ACTIVE",
+    "threat_level": "MEDIUM",
+    "notes": "Tech-savvy member handling social media warfare. Uses online platforms to coordinate and taunt rivals. Under surveillance for online threats.",
+    "created_at": "2026-02-04T21:47:52.682Z",
+    "updated_at": "2026-02-04T21:47:52.682Z",
+    "known_associates": []
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 1,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 2,
+    "relationship_type": "ALLIED",
+    "notes": "Strategic alliance for mutual protection and business operations",
+    "created_at": "2026-01-01T19:16:05.301Z",
+    "updated_at": "2026-01-01T19:16:05.301Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 2,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 3,
+    "relationship_type": "ALLIED",
+    "notes": "Cross-set alliance despite Crip/Blood division",
+    "created_at": "2026-01-01T19:16:05.314Z",
+    "updated_at": "2026-01-01T19:16:05.314Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 3,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 4,
+    "relationship_type": "ALLIED",
+    "notes": "Crip alliance for westside operations",
+    "created_at": "2026-01-01T19:16:05.327Z",
+    "updated_at": "2026-01-01T19:16:05.327Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 4,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 5,
+    "relationship_type": "RIVAL",
+    "notes": "Ongoing territorial disputes and internal Crip rivalry",
+    "created_at": "2026-01-01T19:16:05.339Z",
+    "updated_at": "2026-01-01T19:16:05.339Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 5,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 6,
+    "relationship_type": "WAR",
+    "notes": "Active warfare - multiple shootings and casualties",
+    "created_at": "2026-01-01T19:16:05.352Z",
+    "updated_at": "2026-01-01T19:16:05.352Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 6,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 7,
+    "relationship_type": "RIVAL",
+    "notes": "Blood rivalry with territorial conflicts",
+    "created_at": "2026-01-01T19:16:05.365Z",
+    "updated_at": "2026-01-01T19:16:05.365Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 7,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 8,
+    "relationship_type": "RIVAL",
+    "notes": "Long-standing Crip-on-Crip violence",
+    "created_at": "2026-01-01T19:16:05.377Z",
+    "updated_at": "2026-01-01T19:16:05.378Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 8,
+  "fields": {
+    "gang_1": 1,
+    "gang_2": 9,
+    "relationship_type": "WAR",
+    "notes": "Major conflict - ethnic and territorial warfare",
+    "created_at": "2026-01-01T19:16:05.390Z",
+    "updated_at": "2026-01-01T19:16:05.391Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 9,
+  "fields": {
+    "gang_1": 6,
+    "gang_2": 7,
+    "relationship_type": "ALLIED",
+    "notes": "Blood alliance against common enemies",
+    "created_at": "2026-01-01T19:16:05.403Z",
+    "updated_at": "2026-01-01T19:16:05.403Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 10,
+  "fields": {
+    "gang_1": 5,
+    "gang_2": 8,
+    "relationship_type": "ALLIED",
+    "notes": "United against Grape Street",
+    "created_at": "2026-01-01T19:16:05.416Z",
+    "updated_at": "2026-01-01T19:16:05.416Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 11,
+  "fields": {
+    "gang_1": 2,
+    "gang_2": 4,
+    "relationship_type": "ALLIED",
+    "notes": "Crip cooperation",
+    "created_at": "2026-01-01T19:16:05.428Z",
+    "updated_at": "2026-01-01T19:16:05.428Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 12,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 19,
+    "relationship_type": "ALLIED",
+    "notes": "Strategic Partnership - Drug Distribution network coordination",
+    "created_at": "2026-02-04T21:47:52.696Z",
+    "updated_at": "2026-02-04T21:47:52.696Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 13,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 22,
+    "relationship_type": "ALLIED",
+    "notes": "Affiliation unclear - Potential Sureño tax and protection relationship",
+    "created_at": "2026-02-04T21:47:52.710Z",
+    "updated_at": "2026-02-04T21:47:52.710Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 14,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 23,
+    "relationship_type": "NEUTRAL",
+    "notes": "Loose Affiliation - Nature of relationship under investigation",
+    "created_at": "2026-02-04T21:47:52.722Z",
+    "updated_at": "2026-02-04T21:47:52.722Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 15,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 20,
+    "relationship_type": "ALLIED",
+    "notes": "Strategic Partnership - Joint drug distribution operations",
+    "created_at": "2026-02-04T21:47:52.736Z",
+    "updated_at": "2026-02-04T21:47:52.736Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 16,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 21,
+    "relationship_type": "ALLIED",
+    "notes": "Strategic Partnership - Coordinated distribution territories",
+    "created_at": "2026-02-04T21:47:52.749Z",
+    "updated_at": "2026-02-04T21:47:52.749Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 17,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 2,
+    "relationship_type": "ALLIED",
+    "notes": "Strong Alliance - Multiple joint operations and mutual protection",
+    "created_at": "2026-02-04T21:47:52.763Z",
+    "updated_at": "2026-02-04T21:47:52.763Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 18,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 19,
+    "relationship_type": "ALLIED",
+    "notes": "Strategic Partnership - Supply chain coordination",
+    "created_at": "2026-02-04T21:47:52.776Z",
+    "updated_at": "2026-02-04T21:47:52.776Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 19,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 24,
+    "relationship_type": "NEUTRAL",
+    "notes": "Loose Affiliation - Drug supply connection",
+    "created_at": "2026-02-04T21:47:52.789Z",
+    "updated_at": "2026-02-04T21:47:52.789Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 20,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 25,
+    "relationship_type": "NEUTRAL",
+    "notes": "Loose Affiliation - Drug supply and money laundering",
+    "created_at": "2026-02-04T21:47:52.802Z",
+    "updated_at": "2026-02-04T21:47:52.802Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 21,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 26,
+    "relationship_type": "NEUTRAL",
+    "notes": "Unknown relationship - Under investigation",
+    "created_at": "2026-02-04T21:47:52.814Z",
+    "updated_at": "2026-02-04T21:47:52.814Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 22,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 11,
+    "relationship_type": "ALLIED",
+    "notes": "Unified Grape Street - Two sides of same organization, coordinated operations",
+    "created_at": "2026-02-04T21:47:52.828Z",
+    "updated_at": "2026-02-04T21:47:52.828Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 23,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 5,
+    "relationship_type": "WAR",
+    "notes": "Arch Nemesis - Violent territorial conflict over Rancho",
+    "created_at": "2026-02-04T21:47:52.841Z",
+    "updated_at": "2026-02-04T21:47:52.841Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 24,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 12,
+    "relationship_type": "WAR",
+    "notes": "Arch Nemesis - Active warfare, multiple casualties",
+    "created_at": "2026-02-04T21:47:52.852Z",
+    "updated_at": "2026-02-04T21:47:52.852Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 25,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 8,
+    "relationship_type": "WAR",
+    "notes": "Bitter Rivals - All ECC sets hostile",
+    "created_at": "2026-02-04T21:47:52.864Z",
+    "updated_at": "2026-02-04T21:47:52.864Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 26,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 7,
+    "relationship_type": "WAR",
+    "notes": "Bitter Rivals - Ongoing Blood conflict",
+    "created_at": "2026-02-04T21:47:52.876Z",
+    "updated_at": "2026-02-04T21:47:52.876Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 27,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 5,
+    "relationship_type": "WAR",
+    "notes": "Arch Nemesis - Crip-on-Crip war over territory",
+    "created_at": "2026-02-04T21:47:52.888Z",
+    "updated_at": "2026-02-04T21:47:52.888Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 28,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 12,
+    "relationship_type": "WAR",
+    "notes": "Arch Nemesis - Most violent conflict, highest casualties",
+    "created_at": "2026-02-04T21:47:52.901Z",
+    "updated_at": "2026-02-04T21:47:52.901Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 29,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 8,
+    "relationship_type": "WAR",
+    "notes": "Bitter Rivals - Historic Crip rivalry",
+    "created_at": "2026-02-04T21:47:52.913Z",
+    "updated_at": "2026-02-04T21:47:52.913Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 30,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 7,
+    "relationship_type": "WAR",
+    "notes": "Bitter Rivals - Blood vs Crip warfare",
+    "created_at": "2026-02-04T21:47:52.923Z",
+    "updated_at": "2026-02-04T21:47:52.923Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 31,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 13,
+    "relationship_type": "RIVAL",
+    "notes": "IC Lore - Documented conflicts",
+    "created_at": "2026-02-04T21:47:52.934Z",
+    "updated_at": "2026-02-04T21:47:52.934Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 32,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 14,
+    "relationship_type": "RIVAL",
+    "notes": "IC Lore - Historical tensions",
+    "created_at": "2026-02-04T21:47:52.946Z",
+    "updated_at": "2026-02-04T21:47:52.946Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 33,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 9,
+    "relationship_type": "RIVAL",
+    "notes": "IC Lore - Sureño territorial disputes",
+    "created_at": "2026-02-04T21:47:52.959Z",
+    "updated_at": "2026-02-04T21:47:52.959Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 34,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 13,
+    "relationship_type": "RIVAL",
+    "notes": "IC Lore - Crip factional conflict",
+    "created_at": "2026-02-04T21:47:52.970Z",
+    "updated_at": "2026-02-04T21:47:52.970Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 35,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 14,
+    "relationship_type": "RIVAL",
+    "notes": "IC Lore - Blood vs Crip",
+    "created_at": "2026-02-04T21:47:52.982Z",
+    "updated_at": "2026-02-04T21:47:52.982Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 36,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 9,
+    "relationship_type": "WAR",
+    "notes": "IC Lore - Major ethnic and territorial conflict",
+    "created_at": "2026-02-04T21:47:52.994Z",
+    "updated_at": "2026-02-04T21:47:52.994Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 37,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 15,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Ongoing tensions",
+    "created_at": "2026-02-04T21:47:53.008Z",
+    "updated_at": "2026-02-04T21:47:53.008Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 38,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 16,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Intermittent conflicts",
+    "created_at": "2026-02-04T21:47:53.020Z",
+    "updated_at": "2026-02-04T21:47:53.020Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 39,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 17,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Territorial disputes",
+    "created_at": "2026-02-04T21:47:53.033Z",
+    "updated_at": "2026-02-04T21:47:53.033Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 40,
+  "fields": {
+    "gang_1": 10,
+    "gang_2": 18,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Neighborhood conflicts",
+    "created_at": "2026-02-04T21:47:53.044Z",
+    "updated_at": "2026-02-04T21:47:53.044Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 41,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 15,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Crip-on-Crip tensions",
+    "created_at": "2026-02-04T21:47:53.057Z",
+    "updated_at": "2026-02-04T21:47:53.057Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 42,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 16,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Ongoing disputes",
+    "created_at": "2026-02-04T21:47:53.069Z",
+    "updated_at": "2026-02-04T21:47:53.069Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 43,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 17,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Territory issues",
+    "created_at": "2026-02-04T21:47:53.081Z",
+    "updated_at": "2026-02-04T21:47:53.081Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 44,
+  "fields": {
+    "gang_1": 11,
+    "gang_2": 18,
+    "relationship_type": "RIVAL",
+    "notes": "Beef - Set rivalry",
+    "created_at": "2026-02-04T21:47:53.093Z",
+    "updated_at": "2026-02-04T21:47:53.093Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 45,
+  "fields": {
+    "gang_1": 12,
+    "gang_2": 7,
+    "relationship_type": "ALLIED",
+    "notes": "Blood alliance against Grape Street",
+    "created_at": "2026-02-04T21:47:53.105Z",
+    "updated_at": "2026-02-04T21:47:53.105Z"
+  }
+},
+{
+  "model": "intelligence.gangrelationship",
+  "pk": 46,
+  "fields": {
+    "gang_1": 2,
+    "gang_2": 19,
+    "relationship_type": "ALLIED",
+    "notes": "Coordinated operations",
+    "created_at": "2026-02-04T21:47:53.119Z",
+    "updated_at": "2026-02-04T21:47:53.119Z"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "intelligence",
+    "model": "gang"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "intelligence",
+    "model": "gangmember"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "intelligence",
+    "model": "incident"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "intelligence",
+    "model": "casefile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "intelligence",
+    "model": "gangrelationship"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$0ygVCiwNPeZYk2nTRB8r44$fxwD2tux67PIPll9OqmrwZ6bwpYin4+QOMXgBs9QLqE=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "k0ky",
+    "first_name": "",
+    "last_name": "",
+    "email": "koky@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-01T18:56:57.586Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$0sPPcuuZHgvZI7fJbNsjaQ$qpv/iSFFZTDReMLxhVxZPnqhV/r0Y/FzBfswOFH1ijM=",
+    "last_login": "2026-01-01T19:14:49.674Z",
+    "is_superuser": true,
+    "username": "agent",
+    "first_name": "",
+    "last_name": "",
+    "email": "agent@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-01T18:58:09.159Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Cq0qHJ6sBecNkg3y7gZuNd$zw0AazBr07YEOzexAY6mr+pcSHqg4WWya4/Mrg4fCt0=",
+    "last_login": "2026-02-04T23:46:53.768Z",
+    "is_superuser": true,
+    "username": "doj_agent",
+    "first_name": "DOJ",
+    "last_name": "Agent",
+    "email": "agent1@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-01T19:16:04.811Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$B0vifkrXykKymwdecGUmFX$K0wkhMpdvrEruZW8P74Ib4iV2ADwr2yFZBXUII4B+VU=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "doj_agent2",
+    "first_name": "",
+    "last_name": "",
+    "email": "agent2@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-05T02:22:46.297Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$43tsYyKZg4abNUjNAVmeA7$0zidKMKjxLtpUvBDzR19OJLJ7TcOVYKtvtsXP5/Re14=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "doj_agent3",
+    "first_name": "",
+    "last_name": "",
+    "email": "agent3@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-05T02:22:46.695Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$UBWyPBGUYlzjoc3kQnYM2X$DgPovi48ezyEkAgmujyKMbp7upr8B27T5eusT0S0Zo0=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "doj_agent4",
+    "first_name": "",
+    "last_name": "",
+    "email": "agent4@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-05T02:22:47.098Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$mCtrrZg37q4lu3m245X0ax$B2ojmr1lh1ns7to4Qg49lg4zdMrH7/fMFwpD2xQupSs=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "doj_agent5",
+    "first_name": "",
+    "last_name": "",
+    "email": "agent5@doj.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-05T02:22:47.501Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 1,
+  "fields": {
+    "case_number": "SA-DOJ-2026-GSC-001",
+    "title": "Operation Grape Harvest - GSC Investigation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Comprehensive investigation into Grape Street Crip operations, focusing on narcotics distribution network and violent conflicts with rival gangs, particularly BHRB and F13.",
+    "priority": "URGENT",
+    "status": "ACTIVE",
+    "opened_date": "2026-01-01T19:16:05.667Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-01-01T19:16:05.667Z",
+    "updated_at": "2026-01-01T19:16:05.667Z",
+    "gangs": [
+      6,
+      9,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 2,
+  "fields": {
+    "case_number": "SA-DOJ-2026-GANG-002",
+    "title": "Blood vs Crip Territory War - South Central",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Escalating violence between Blood and Crip factions in South Central. Multiple shootings and retaliations documented. Focus on BHRB and GSC conflict.",
+    "priority": "URGENT",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:37.681Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.681Z",
+    "updated_at": "2026-02-04T21:37:37.681Z",
+    "gangs": [
+      3,
+      6,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 3,
+  "fields": {
+    "case_number": "SA-DOJ-2026-NARC-003",
+    "title": "Multi-Gang Narcotics Distribution Network",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigation into coordinated drug trafficking operation involving GSC, HCG, and PBGC. Interstate distribution suspected.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:37.731Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.731Z",
+    "updated_at": "2026-02-04T21:37:37.731Z",
+    "gangs": [
+      4,
+      2,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 4,
+  "fields": {
+    "case_number": "SA-DOJ-2026-HOM-004",
+    "title": "Gang-Related Homicides - Rancho District",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "String of murders linked to ongoing feud between GSC and PJRC over Rancho territory. 5 victims in past 3 months.",
+    "priority": "HIGH",
+    "status": "INVESTIGATING",
+    "opened_date": "2026-02-04T21:37:37.775Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.775Z",
+    "updated_at": "2026-02-04T21:37:37.775Z",
+    "gangs": [
+      5,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 5,
+  "fields": {
+    "case_number": "SA-DOJ-2026-WEAP-005",
+    "title": "Illegal Weapons Trafficking Ring",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Intelligence suggests large-scale weapons importation and distribution. GSC and allied gangs suspected of coordinating purchases.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:37.835Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.835Z",
+    "updated_at": "2026-02-04T21:37:37.835Z",
+    "gangs": [
+      3,
+      2,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 6,
+  "fields": {
+    "case_number": "SA-DOJ-2026-EXT-006",
+    "title": "Organized Crime - Extortion and Racketeering",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Local businesses reporting systematic extortion by gang members. Pattern suggests organized operation across multiple territories.",
+    "priority": "MEDIUM",
+    "status": "OPEN",
+    "opened_date": "2026-02-04T21:37:37.881Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.881Z",
+    "updated_at": "2026-02-04T21:37:37.881Z",
+    "gangs": [
+      8,
+      9,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 7,
+  "fields": {
+    "case_number": "SA-DOJ-2026-RIOT-007",
+    "title": "Gang Summit Intelligence - Potential Conflict",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Intercepted communications suggest planned confrontation between allied and rival factions. High risk of major violence.",
+    "priority": "URGENT",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:37.925Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.925Z",
+    "updated_at": "2026-02-04T21:37:37.925Z",
+    "gangs": [
+      2,
+      5,
+      6,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 8,
+  "fields": {
+    "case_number": "SA-DOJ-2026-COLD-008",
+    "title": "Cold Case Review - 2024 Jordan Downs Shooting",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Re-opening investigation into mass shooting at Jordan Downs. New evidence suggests GSC involvement and BHRB retaliation.",
+    "priority": "MEDIUM",
+    "status": "PENDING",
+    "opened_date": "2026-02-04T21:37:37.982Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:37.982Z",
+    "updated_at": "2026-02-04T21:37:37.982Z",
+    "gangs": [
+      6,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 9,
+  "fields": {
+    "case_number": "SA-DOJ-2026-JUVE-009",
+    "title": "Juvenile Gang Recruitment Investigation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Increased gang recruitment activity targeting minors. Multiple gangs competing for young members in South Central schools.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:38.018Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:38.019Z",
+    "updated_at": "2026-02-04T21:37:38.019Z",
+    "gangs": [
+      8,
+      7,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 10,
+  "fields": {
+    "case_number": "SA-DOJ-2026-INTEL-010",
+    "title": "Cross-Gang Alliance Monitoring",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Unusual alliance patterns observed. Blood-Crip cooperation between GSC and BPS requires surveillance and analysis.",
+    "priority": "MEDIUM",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:38.063Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:38.063Z",
+    "updated_at": "2026-02-04T21:37:38.063Z",
+    "gangs": [
+      4,
+      3,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 11,
+  "fields": {
+    "case_number": "SA-DOJ-2026-ASSAULT-011",
+    "title": "Drive-By Shooting Series - Florence Corridor",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Series of coordinated drive-by shootings along Florence Avenue. F13 and GSC engaging in active warfare.",
+    "priority": "CRITICAL",
+    "status": "INVESTIGATING",
+    "opened_date": "2026-02-04T21:37:38.115Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:38.115Z",
+    "updated_at": "2026-02-04T21:37:38.115Z",
+    "gangs": [
+      9,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 12,
+  "fields": {
+    "case_number": "SA-DOJ-2026-MONEY-012",
+    "title": "Money Laundering Operation - Front Businesses",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Several businesses suspected of being gang fronts for money laundering. Financial crimes unit investigating GSC connections.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:37:38.151Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:37:38.151Z",
+    "updated_at": "2026-02-04T21:37:38.151Z",
+    "gangs": [
+      2,
+      1
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 13,
+  "fields": {
+    "case_number": "SA-DOJ-2026-GRAPE-001",
+    "title": "Operation Grape Harvest - Comprehensive GSC Investigation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Primary investigation into both Rancho Varrio Grape 13 and Grape Street Rancho Crip operations. Focus on leadership structure, narcotics distribution, weapons trafficking, and violent crimes. Target: Dismantling entire Grape Street organization.",
+    "priority": "URGENT",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.440Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.440Z",
+    "updated_at": "2026-02-04T21:47:53.440Z",
+    "gangs": [
+      11,
+      10
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 14,
+  "fields": {
+    "case_number": "SA-DOJ-2026-BLOOD-002",
+    "title": "Blood Alliance vs Grape Street War",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigation into coordinated Blood gang warfare against Grape Street. BHB and HVB alliance targeting both RVG13 and GSC. Multiple homicides, drive-by shootings, and retaliations. High casualty count.",
+    "priority": "URGENT",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.475Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.476Z",
+    "updated_at": "2026-02-04T21:47:53.476Z",
+    "gangs": [
+      7,
+      12,
+      11,
+      10
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 15,
+  "fields": {
+    "case_number": "SA-DOJ-2026-CRIP-003",
+    "title": "Crip-on-Crip Violence - Rancho Territory War",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "PJRC vs GSC territorial conflict over Rancho district. Escalating violence with multiple shootings. Investigation into root causes and potential mediation possibilities.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.530Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.530Z",
+    "updated_at": "2026-02-04T21:47:53.530Z",
+    "gangs": [
+      5,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 16,
+  "fields": {
+    "case_number": "SA-DOJ-2026-NARC-004",
+    "title": "Amendola-Grape Distribution Network",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Multi-agency investigation into sophisticated drug distribution network. The Amendola Crew coordinating with both Grape factions. Interstate trafficking suspected. DEA cooperation.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.565Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.565Z",
+    "updated_at": "2026-02-04T21:47:53.565Z",
+    "gangs": [
+      21,
+      19,
+      20,
+      11,
+      10
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 17,
+  "fields": {
+    "case_number": "1042",
+    "title": "dasd",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "sadsad",
+    "priority": "URGENT",
+    "status": "PENDING",
+    "opened_date": "2026-02-04T21:47:53.633Z",
+    "closed_date": null,
+    "notes": "sadasdasdas",
+    "image": "case_files/babushka_s6nTncP.jpg",
+    "created_at": "2026-02-04T21:47:53.633Z",
+    "updated_at": "2026-02-05T00:23:44.022Z",
+    "gangs": [
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 18,
+  "fields": {
+    "case_number": "SA-DOJ-2026-WEAPONS-006",
+    "title": "Armenian-GSC Weapons Trafficking Ring",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigation into weapons supply chain from Armenian Criminal Enterprise to Baby Locs. Large-scale firearms trafficking. ATF joint operation.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.658Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.658Z",
+    "updated_at": "2026-02-04T21:47:53.658Z",
+    "gangs": [
+      24,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 19,
+  "fields": {
+    "case_number": "SA-DOJ-2026-EME-007",
+    "title": "Mexican Mafia - RVG13 Connection Investigation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigating nature of Mexican Mafia relationship with Rancho Varrio Grape 13. Tax payments, protection, or deeper involvement unclear. Prison-street gang coordination suspected.",
+    "priority": "HIGH",
+    "status": "INVESTIGATING",
+    "opened_date": "2026-02-04T21:47:53.691Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.691Z",
+    "updated_at": "2026-02-04T21:47:53.691Z",
+    "gangs": [
+      10,
+      22
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 20,
+  "fields": {
+    "case_number": "SA-DOJ-2026-MONEY-008",
+    "title": "Chinatown Money Laundering Operation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Financial crimes investigation. Chinatown organization suspected of laundering drug proceeds for Baby Locs. Complex shell company structure.",
+    "priority": "MEDIUM",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.727Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.727Z",
+    "updated_at": "2026-02-04T21:47:53.727Z",
+    "gangs": [
+      25,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 21,
+  "fields": {
+    "case_number": "SA-DOJ-2026-BLACK-009",
+    "title": "The Black Car - Unknown Entity Investigation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Mysterious \"Black Car\" organization mentioned in intercepted communications. Relationship to Baby Locs unknown. Surveillance ongoing.",
+    "priority": "MEDIUM",
+    "status": "PENDING",
+    "opened_date": "2026-02-04T21:47:53.762Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.763Z",
+    "updated_at": "2026-02-04T21:47:53.763Z",
+    "gangs": [
+      26,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 22,
+  "fields": {
+    "case_number": "SA-DOJ-2026-HOOVER-010",
+    "title": "Hoover Criminals - GSC Alliance Operations",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigating strong alliance between HCG and Baby Locs. Multiple joint operations documented. Coordinated territorial expansion.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.797Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.797Z",
+    "updated_at": "2026-02-04T21:47:53.797Z",
+    "gangs": [
+      2,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 23,
+  "fields": {
+    "case_number": "SA-DOJ-2026-JUVE-011",
+    "title": "Juvenile Recruitment - Tiny Wynos & YMS",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigation into aggressive recruitment of minors by Tiny Wynos (RVG13) and Young Militant Shottas (GSC). School-based operations.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.833Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.833Z",
+    "updated_at": "2026-02-04T21:47:53.833Z",
+    "gangs": [
+      11,
+      10
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 24,
+  "fields": {
+    "case_number": "SA-DOJ-2026-CYBER-012",
+    "title": "Social Media Gang Activity & Threats",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Monitoring online gang activity. Sosa#4k and other members using social platforms for threats, coordination, and recruitment. Cyber crimes unit involved.",
+    "priority": "MEDIUM",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.867Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.867Z",
+    "updated_at": "2026-02-04T21:47:53.867Z",
+    "gangs": [
+      8,
+      7,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 25,
+  "fields": {
+    "case_number": "SA-DOJ-2026-TERROR-013",
+    "title": "Sureño Network - Terror Town 13 Partnership",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Investigating coordination between RVG13 and TT13. Shared distribution territories and protection arrangements.",
+    "priority": "MEDIUM",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.916Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.916Z",
+    "updated_at": "2026-02-04T21:47:53.916Z",
+    "gangs": [
+      20,
+      10
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 26,
+  "fields": {
+    "case_number": "SA-DOJ-2026-RUGER-014",
+    "title": "Derek \"Ruger\" Fierro - Leadership Investigation",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Focused investigation on primary RVG13 leader. Weapons trafficking connections, Mexican Mafia ties, and violent enforcement activities.",
+    "priority": "HIGH",
+    "status": "ACTIVE",
+    "opened_date": "2026-02-04T21:47:53.948Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.948Z",
+    "updated_at": "2026-02-04T21:47:53.948Z",
+    "gangs": [
+      10,
+      22
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.casefile",
+  "pk": 27,
+  "fields": {
+    "case_number": "SA-DOJ-2026-COLD-015",
+    "title": "Cold Case Review - 2023-2025 Grape Street Murders",
+    "lead_agent": [
+      "doj_agent"
+    ],
+    "description": "Re-opening multiple unsolved homicides. New evidence and witness testimony. Cases linked to ongoing gang warfare.",
+    "priority": "MEDIUM",
+    "status": "PENDING",
+    "opened_date": "2026-02-04T21:47:53.984Z",
+    "closed_date": null,
+    "notes": "",
+    "image": "",
+    "created_at": "2026-02-04T21:47:53.984Z",
+    "updated_at": "2026-02-04T21:47:53.984Z",
+    "gangs": [
+      5,
+      12,
+      11
+    ],
+    "members": [],
+    "team_members": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 1,
+  "fields": {
+    "title": "Drive-by shooting on Grape Street",
+    "incident_type": "ASSAULT",
+    "location": "Grape Street, Jordan Downs area",
+    "date_time": "2025-12-31T03:16:05.502Z",
+    "description": "Suspected BHRB members conducted drive-by targeting Grape Street territory. Multiple shots fired, 2 civilians injured.",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-01-01T19:16:05.533Z",
+    "updated_at": "2026-01-01T19:16:05.533Z",
+    "gangs_involved": [
+      6,
+      1
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 2,
+  "fields": {
+    "title": "Narcotics seizure at Rancho",
+    "incident_type": "DRUG_TRAFFICKING",
+    "location": "Rancho district, East LS",
+    "date_time": "2025-12-28T03:16:05.564Z",
+    "description": "Large drug operation interrupted. GSC and PJRC members present, territorial dispute over distribution.",
+    "severity": "HIGH",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-01-01T19:16:05.565Z",
+    "updated_at": "2026-01-01T19:16:05.565Z",
+    "gangs_involved": [
+      5,
+      1
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 3,
+  "fields": {
+    "title": "Gang-related homicide - Florence area",
+    "incident_type": "MURDER",
+    "location": "Florence Avenue, South Central",
+    "date_time": "2025-12-26T03:16:05.599Z",
+    "description": "Suspected GSC member killed in F13 territory. Retaliation expected.",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-01-01T19:16:05.601Z",
+    "updated_at": "2026-01-01T19:16:05.601Z",
+    "gangs_involved": [
+      9,
+      1
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 4,
+  "fields": {
+    "title": "Weapons trafficking operation",
+    "incident_type": "WEAPONS",
+    "location": "Industrial district",
+    "date_time": "2025-12-23T03:16:05.632Z",
+    "description": "Intelligence suggests GSC and HCG coordinating weapons acquisition. Investigation ongoing.",
+    "severity": "HIGH",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-01-01T19:16:05.633Z",
+    "updated_at": "2026-01-01T19:16:05.633Z",
+    "gangs_involved": [
+      2,
+      1
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 5,
+  "fields": {
+    "title": "Jordan Downs Drive-By - Multiple Casualties",
+    "incident_type": "ASSAULT",
+    "location": "Jordan Downs Projects, Grape Street",
+    "date_time": "2026-02-02T05:47:53.133Z",
+    "description": "BHB members conducted drive-by shooting targeting Baby Locs territory. 4 shot, 1 fatally. Suspected retaliation for previous GSC action. Snatch#5 believed to be target.",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.179Z",
+    "updated_at": "2026-02-04T21:47:53.179Z",
+    "gangs_involved": [
+      12,
+      11
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 6,
+  "fields": {
+    "title": "Rancho Territory Shooting - Gang Member Killed",
+    "incident_type": "MURDER",
+    "location": "Rancho District, near PJ territory border",
+    "date_time": "2026-01-31T05:47:53.216Z",
+    "description": "RVG13 member shot and killed in disputed territory. Suspect vehicle matches PJRC descriptions. Retaliation expected.",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.217Z",
+    "updated_at": "2026-02-04T21:47:53.217Z",
+    "gangs_involved": [
+      5,
+      10
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 7,
+  "fields": {
+    "title": "Major Narcotics Seizure - Multi-Gang Operation",
+    "incident_type": "DRUG_TRAFFICKING",
+    "location": "Industrial District warehouse",
+    "date_time": "2026-01-29T05:47:53.251Z",
+    "description": "50 kilos cocaine seized. Evidence suggests coordinated distribution network between RVG13, Amendola Crew, and TT13. Multiple arrests made.",
+    "severity": "HIGH",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.252Z",
+    "updated_at": "2026-02-04T21:47:53.252Z",
+    "gangs_involved": [
+      19,
+      20,
+      10
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 8,
+  "fields": {
+    "title": "Weapons Cache Discovered - Armenian Connection",
+    "incident_type": "WEAPONS",
+    "location": "East Hollywood storage unit",
+    "date_time": "2026-01-26T05:47:53.297Z",
+    "description": "30+ firearms recovered. Links to ACE weapons trafficking. Baby Locs members arrested at scene. Investigation ongoing.",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.299Z",
+    "updated_at": "2026-02-04T21:47:53.299Z",
+    "gangs_involved": [
+      24,
+      11
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 9,
+  "fields": {
+    "title": "East Coast Crips Ambush - GSC Confrontation",
+    "incident_type": "ASSAULT",
+    "location": "Vernon Avenue, East LS",
+    "date_time": "2026-01-24T05:47:53.332Z",
+    "description": "ECC members ambushed GSC vehicle. Gunfire exchanged, 3 wounded. Ongoing Crip-on-Crip warfare escalating.",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.333Z",
+    "updated_at": "2026-02-04T21:47:53.333Z",
+    "gangs_involved": [
+      8,
+      11
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 10,
+  "fields": {
+    "title": "Florencia 13 Conflict - Sureño Dispute",
+    "incident_type": "TERRITORY_DISPUTE",
+    "location": "Florence Avenue corridor",
+    "date_time": "2026-01-21T05:47:53.369Z",
+    "description": "Major confrontation over drug distribution territory. Multiple injuries. Mexican Mafia involvement suspected in attempting to mediate.",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.370Z",
+    "updated_at": "2026-02-04T21:47:53.370Z",
+    "gangs_involved": [
+      9,
+      10
+    ],
+    "members_involved": []
+  }
+},
+{
+  "model": "intelligence.incident",
+  "pk": 11,
+  "fields": {
+    "title": "Social Media Threats Lead to Shooting",
+    "incident_type": "ASSAULT",
+    "location": "South Central, residential area",
+    "date_time": "2026-01-18T05:47:53.401Z",
+    "description": "Online threats between Sosa#4k and HVB members escalated to real-world violence. 2 injured in shooting. Digital evidence collected.",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "reported_by": [
+      "doj_agent"
+    ],
+    "evidence": "",
+    "created_at": "2026-02-04T21:47:53.402Z",
+    "updated_at": "2026-02-04T21:47:53.402Z",
+    "gangs_involved": [
+      7,
+      11
+    ],
+    "members_involved": []
+  }
+}
+]
