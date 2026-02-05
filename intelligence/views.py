@@ -23,7 +23,7 @@ def health_check(request):
 
 
 def login_view(request):
-    """Login view for DOJ agents - simplified for internal use"""
+    """Login view for DOJ agents - supports multiple agents"""
     if request.user.is_authenticated:
         return redirect('dashboard')
     
@@ -35,25 +35,25 @@ def login_view(request):
             messages.error(request, 'Please enter both Agent ID and Passcode.')
             return render(request, 'intelligence/login.html')
         
-        # Direct credential check for doj_agent / agent123
-        if agent_id.lower() == 'doj_agent' and passcode == 'agent123':
+        # Quick access for DOJ agents (doj_agent, doj_agent2, doj_agent3, doj_agent4, doj_agent5)
+        if agent_id.lower().startswith('doj_agent') and passcode == 'agent123':
+            username = agent_id.lower()
             # Get or create the user
             user, created = User.objects.get_or_create(
-                username='doj_agent',
+                username=username,
                 defaults={
-                    'email': 'admin@example.com',
+                    'email': f'{username}@doj.com',
                     'is_staff': True,
                     'is_superuser': True,
                     'is_active': True
                 }
             )
-            if not created:
-                # Ensure user is active and has correct permissions
-                user.is_staff = True
-                user.is_superuser = True
-                user.is_active = True
-                user.set_password('agent123')  # Ensure password is set
-                user.save()
+            # Always ensure correct permissions and password
+            user.is_staff = True
+            user.is_superuser = True
+            user.is_active = True
+            user.set_password('agent123')
+            user.save()
             
             login(request, user)
             return redirect('dashboard')
