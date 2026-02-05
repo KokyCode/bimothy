@@ -12,7 +12,7 @@
     --hover-bg: #252b3d;
     
     /* Accent Colors */
-    --accent-blue: #3498db;
+    --accent-blue: #6a489f;
     --accent-cyan: #00d4ff;
     --accent-gold: #f39c12;
     --accent-red: #e74c3c;
@@ -117,7 +117,7 @@ input, select, textarea {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 50%, rgba(106, 72, 159, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
@@ -136,7 +136,7 @@ input, select, textarea {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(106, 72, 159, 0.05) 0%, transparent 70%);
     animation: rotate 20s linear infinite;
     pointer-events: none;
 }
@@ -464,7 +464,7 @@ input, select, textarea {
 }
 
 .nav-menu a.active {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(0, 212, 255, 0.2));
+    background: linear-gradient(135deg, rgba(106, 72, 159, 0.2), rgba(0, 212, 255, 0.2));
     color: var(--accent-cyan);
     border-left: 3px solid var(--accent-cyan);
 }
@@ -2081,7 +2081,7 @@ input, select, textarea {
     align-items: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-sm) var(--spacing-md);
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(106, 72, 159, 0.1);
     border: 1px solid var(--accent-blue);
     border-radius: var(--radius-md);
     margin-top: var(--spacing-sm);
@@ -2122,7 +2122,7 @@ input, select, textarea {
 }
 
 .btn-toggle-edit.active {
-    background: rgba(52, 152, 219, 0.2);
+    background: rgba(106, 72, 159, 0.2);
     border-color: var(--accent-blue);
     color: var(--accent-blue);
 }
@@ -2140,7 +2140,7 @@ input, select, textarea {
 }
 
 .btn-create-new:hover {
-    background: #2980b9;
+    background: #5a3a8f;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -2168,7 +2168,7 @@ input, select, textarea {
 }
 
 .btn-edit:hover {
-    background: rgba(52, 152, 219, 0.2);
+    background: rgba(106, 72, 159, 0.2);
     border-color: var(--accent-blue);
     transform: scale(1.1);
 }
@@ -2299,7 +2299,7 @@ input, select, textarea {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-blue);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    box-shadow: 0 0 0 3px rgba(106, 72, 159, 0.1);
 }
 
 .form-group textarea {
@@ -2349,7 +2349,7 @@ input, select, textarea {
 }
 
 .btn-save:hover {
-    background: #2980b9;
+    background: #5a3a8f;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -2651,7 +2651,7 @@ input, select, textarea {
 }
 
 .btn-crop-apply:hover {
-    background: #2980b9;
+    background: #5a3a8f;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
